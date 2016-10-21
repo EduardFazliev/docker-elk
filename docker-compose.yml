@@ -9,7 +9,8 @@ logstash:
   build: logstash/
   command: logstash -f /etc/logstash/conf.d/logstash.conf
   volumes:
-    - ./logstash/config:/etc/logstash/conf.d
+    - /Users/efazliev/docker-elk/logstash/config:/etc/logstash/conf.d
+    - /Users/efazliev/docker-elk/test:/srv
   ports:
     - "5000:5000"
   links:
